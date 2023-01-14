@@ -1,0 +1,31 @@
+{
+    "name": "Realestate",
+    "version": "1.0",
+    "description": "Realestate.com.au extensions to automatically show your distance to property when viewing them!",
+    "manifest_version": 3,
+    "permissions": [
+        "storage",
+        "activeTab",
+        "scripting"
+    ],
+    "options_ui": {
+        "page": "html/options.html",
+        "open_in_tab": false
+    },
+    "icons": {
+        "16": "images/favicon-32x32.png",
+        "32": "images/favicon-32x32.png",
+        "48": "images/favicon-32x32.png",
+        "128": "images/favicon-32x32.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*.realestate.com.au/property-*"
+            ],
+            "js": [
+                "scripts/realestate.com.au.js"
+            ]
+        }
+    ]
+}
