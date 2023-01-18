@@ -21,7 +21,9 @@
     "content_scripts": [
         {
             "matches": [
-                "https://*.realestate.com.au/property-*"
+                "https://*.realestate.com.au/property-*",
+                "https://*.realestate.com.au/*/property-*",
+                "https://www.realestate.com.au/buy/*/list*"
             ],
             "js": [
                 "scripts/realestate.com.au.js"
